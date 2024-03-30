@@ -28,6 +28,8 @@ task :crawl do
     ) do |r|
       options[:recrawl] = r
     end
+    args = opts.order!(ARGV) {}
+    opts.parse!(args)
   end.parse!
 
   recrawl = options[:recrawl]

@@ -8,6 +8,6 @@ services:
     ports:
       - "9292:9292"
   mongo:
-    image: mongo:3.4.21
+    image: mongo:3.6.23
     ports:
       - "27017:27017"

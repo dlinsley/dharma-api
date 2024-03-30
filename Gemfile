@@ -1,7 +1,8 @@
-ruby '2.3.0'
+ruby '2.7.4'
+source "https://rubygems.org"
 
 gem 'mongoid'
-gem 'mongoid_auto_increment_id', '0.8.1'
+gem 'mongoid_auto_increment_id'
 gem 'log_buddy'
 gem 'nokogiri'
 gem 'sinatra'
@@ -11,6 +12,7 @@ gem 'rake'
 gem 'rdiscount'
 gem 'rack-cors', require: 'rack/cors'
 gem 'newrelic_rpm'
+gem 'bigdecimal', '~> 1.4'
 
 group :development do
   require 'rbconfig'

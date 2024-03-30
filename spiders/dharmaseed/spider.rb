@@ -11,7 +11,7 @@
 # May all beings be from suffering
 
 class Dharmaseed < Spider
-  BASE_DOMAIN = 'http://dharmaseed.org'.freeze
+  BASE_DOMAIN = 'https://dharmaseed.org'.freeze
   BASE_URL = BASE_DOMAIN + '/talks/?page='
   LICENSE = 'http://creativecommons.org/licenses/by-nc-nd/3.0/'.freeze
 

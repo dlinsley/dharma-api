@@ -1,9 +1,4 @@
-FROM ruby:2.3.0
-
-# The soures.list was outdated
-RUN echo "deb http://httpredir.debian.org/debian jessie main\n\
-deb http://security.debian.org jessie/updates main" \
-> /etc/apt/sources.list
+FROM ruby:2.7.4-bullseye
 
 # lsof is required by guard
 RUN apt-get update && apt-get install -y lsof
@@ -12,6 +7,7 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
+RUN gem install bundler:2.4.20
 RUN bundle install
 COPY . /myapp
 
