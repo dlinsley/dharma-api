@@ -155,7 +155,7 @@ class Audiodharma < Spider
       full_link = BASE_URL + @page.to_s
       d "\n#######################################"
       d 'Link to current page :: ' + full_link
-      doc = open(full_link).read
+      doc = URI.open(full_link).read
       doc =~ /No matching talks are available/ && break # Fin
       scrape_page(doc)
       break if @finished

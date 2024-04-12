@@ -65,7 +65,7 @@ class Sfzc < Spider
     d "Opening #{BASE_URL}"
     # First collect all the talk pages
     talk_pages = [BASE_URL]
-    doc = open(BASE_URL).read
+    doc = URI.open(BASE_URL).read
     Nokogiri::HTML(doc).css('.minioff a').each do |a|
       talk_pages << BASE_DOMAIN + '/zc/' + a['href']
     end

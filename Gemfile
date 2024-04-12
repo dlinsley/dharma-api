@@ -1,4 +1,4 @@
-ruby '2.7.4'
+ruby '3.2.3'
 source "https://rubygems.org"
 
 gem 'mongoid'
@@ -10,7 +10,7 @@ gem 'thin'
 gem 'mail'
 gem 'rake'
 gem 'rdiscount'
-gem 'rack-cors', require: 'rack/cors'
+gem 'rack-cors'
 gem 'newrelic_rpm'
 gem 'bigdecimal', '~> 1.4'
 

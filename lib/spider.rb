@@ -14,7 +14,7 @@ class Spider
 
   # Wrapper for fetching the remote html of an individual speaker so we can override it in tests
   def open_speaker_doc(url)
-    open(url)
+    URI.open(url)
   end
 
   # Convert a time like 1:34:21 to 5661 (seconds)

@@ -11,10 +11,14 @@ development:
   clients:
     default:
       database: dharma_api_dev
-      <<: *default_host
+#      <<: *default_host
+      hosts:
+      - mongo:27017
 
 test:
   clients:
     default:
       database: dharma_api_test
-      <<: *default_host
+#      <<: *default_host
+      hosts:
+      - mongo:27017

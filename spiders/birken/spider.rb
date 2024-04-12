@@ -65,7 +65,7 @@ class Birken < Spider
   # So scrape it and put them into a hash.
   def parse_speaker_pictures
     @pics = {}
-    Nokogiri::HTML(open('http://birken.ca/audio_monastics')).css('td > p > img').each do |img|
+    Nokogiri::HTML(URI.open('http://birken.ca/audio_monastics')).css('td > p > img').each do |img|
       @pics[img.attribute('alt').text] = img.attribute('src').text
     end
   end
@@ -80,7 +80,7 @@ class Birken < Spider
     log.info 'Crawl initiated on ' + Time.now.inspect
     d 'Parsing speaker pictures'
     d "Opening #{BASE_URL}"
-    Nokogiri::HTML(open(BASE_URL)).css('ul').each do |ul|
+    Nokogiri::HTML(URI.open(BASE_URL)).css('ul').each do |ul|
       parse_talk ul
     end
   end
