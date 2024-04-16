@@ -42,7 +42,7 @@ module APIPHelpers
   end
 
   def skip_helper
-    rpp * (params.fetch('page', 1) - 1)
+    rpp * (params.fetch('page', 1).to_i - 1)
   end
 
   # I know it searches fields that aren't necessarily in the current model,
