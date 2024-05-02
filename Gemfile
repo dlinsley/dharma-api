@@ -2,7 +2,6 @@ ruby '3.2.3'
 source "https://rubygems.org"
 
 gem 'mongoid'
-gem 'mongoid_auto_increment_id'
 gem 'log_buddy'
 gem 'nokogiri'
 gem 'sinatra'
@@ -12,7 +11,7 @@ gem 'rake'
 gem 'rdiscount'
 gem 'rack-cors'
 gem 'newrelic_rpm'
-gem 'bigdecimal', '~> 1.4'
+gem 'bigdecimal'
 
 group :development do
   require 'rbconfig'

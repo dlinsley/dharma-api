@@ -3,7 +3,6 @@ require 'bundler/setup'
 
 require 'sinatra/base'
 require 'mongoid'
-require 'mongoid_auto_increment_id'
 require 'mail'
 require 'tilt/rdiscount'
 require 'tilt/erb'
