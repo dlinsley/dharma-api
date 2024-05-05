@@ -2,6 +2,7 @@ ruby '3.2.3'
 source "https://rubygems.org"
 
 gem 'mongoid'
+gem 'mongoid_auto_increment'
 gem 'log_buddy'
 gem 'nokogiri'
 gem 'sinatra'

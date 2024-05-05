@@ -4,13 +4,11 @@ require 'digest'
 class Speaker
   include Mongoid::Document
 
-  field :id
+  auto_increment :id
   field :name
   field :bio
   field :website
   field :picture
-
-  alias_attribute :id, :_id
 
   validates_presence_of :name
   validates_uniqueness_of :name
@@ -22,7 +20,7 @@ end
 class Talk
   include Mongoid::Document
 
-  field :id
+  auto_increment :id
   field :title
   field :permalink
   field :duration, type: Integer # in seconds
@@ -32,8 +30,6 @@ class Talk
   field :event
   field :source
   field :license
-
-  alias_attribute :id, :_id
 
   validates_presence_of :title
   validates_presence_of :permalink

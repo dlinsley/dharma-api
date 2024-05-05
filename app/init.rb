@@ -3,6 +3,7 @@ require 'bundler/setup'
 
 require 'sinatra/base'
 require 'mongoid'
+require 'mongoid_auto_increment'
 require 'mail'
 require 'tilt/rdiscount'
 require 'tilt/erb'
@@ -14,7 +15,6 @@ PROJECT_ROOT = File.expand_path '../../', __FILE__
 $LOAD_PATH.unshift PROJECT_ROOT
 
 require 'lib/logging'
-
 require 'app/models'
 
 # read the local configuration

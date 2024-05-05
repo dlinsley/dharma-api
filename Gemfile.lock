@@ -68,6 +68,8 @@ GEM
       activemodel (>= 5.1, < 7.2, != 7.0.0)
       concurrent-ruby (>= 1.0.5, < 2.0)
       mongo (>= 2.18.0, < 3.0.0)
+    mongoid_auto_increment (0.1.6)
+      mongoid (>= 2.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.2.0)
@@ -152,6 +154,7 @@ DEPENDENCIES
   log_buddy
   mail
   mongoid
+  mongoid_auto_increment
   newrelic_rpm
   nokogiri
   rack-cors
