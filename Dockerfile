@@ -1,4 +1,4 @@
-FROM ruby:3.2.3-bookworm
+FROM ruby:3.2.5-bookworm
 
 # lsof is required by guard
 RUN apt-get update && apt-get install -y lsof
